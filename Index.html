@@ -29,53 +29,7 @@
     angular.module('ods-widgets').config(function (ODSWidgetsConfigProvider, $httpProvider) {
         ODSWidgetsConfigProvider.setConfig({
             "defaultDomain": "https://userclub.opendatasoft.com/",
-         
-                
-                'Environment': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg',
-                    'color': '#1446A0'
-                },
-                'Transports, Déplacements': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg',
-                    'color': '#1446A0'
-                },
-                'Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg',
-                    'color': '#1446A0'
-                },
-                'Économie, Business, PME, Développement économique, Emploi': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg',
-                    'color': '#1446A0'
-                },
-                'Administration, Gouvernement, Finances publiques, Citoyenneté': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg',
-                    'color': '#1446A0'
-                },
-                'Justice, Sécurité, Police, Crime': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg',
-                    'color': '#1446A0'
-                },
-                'Sport, Loisirs': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg',
-                    'color': '#1446A0'
-                },
-                'Hébergement, Restauration': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg',
-                    'color': '#1446A0'
-                },
-                'Services, Social': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg',
-                    'color': '#1446A0'
-                },
-                'Checklist': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg',
-                    'color': '#1446A0'
-                },
-                'Usages': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg',
-                    'color': '#1446A0'
-                }
-            },
+                     },
             "mapPrependAttribution": "Jawg apikey NOT suitable for production"
         });
         $httpProvider.interceptors.push(sourceMonitoringInterceptor);
