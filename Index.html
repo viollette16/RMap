@@ -1,3 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    
+
+    
+        <title>Carte &mdash; Open Data Rennes</title>
+        <link rel="stylesheet" type="text/css" href="/static/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/vendor/normalize/normalize.css">
+        <link rel="stylesheet" href="/static/pictos/odsui/odsui.css" type="text/css">
+
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Language" content="fr">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        
+<link rel="shortcut icon" href="https://s3-eu-west-1.amazonaws.com/aws-ec2-eu-1-opendatasoft-staticfileset/rennes-metropole/favicon">
+
+
+
+        <!--[if lte IE 9]>
+            <script>
+            // Stub the console object to avoid accidental leftover logs breaking IE <=9
+            if (!window.console) window.console = {};
+            if (!window.console.log) window.console.log = function () { };
+            </script>
+            <script src="/static/vendor/base64-polyfill/base64.min.js" type="text/javascript"></script>
+        <![endif]-->
+    
+
+    
+    
+
+    <link rel="canonical" href="https://data.rennesmetropole.fr/map/">
+
+    
+
+    <link rel="stylesheet" href="/static/compressed/css/d10803a57c15.css" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="https://s3-eu-west-1.amazonaws.com/aws-ec2-eu-1-opendatasoft-staticfileset/rennes-metropole/stylesheet/549.css">
+
+    <base href="/map/">
+    
+    </head>
+    <body class="">
+        <div class="ods-content">
+            
+
+ 
+        
+            
+<nav class="ods-front-header" ods-responsive-menu breakpoint="1000">
+    <ods-responsive-menu-placeholder>
+        <!-- content displayed only below the 1000px breakpoint -->
+    </ods-responsive-menu-placeholder>
+    <ods-responsive-menu-collapsible>
+        <!-- content displayed normally above the 1000px breakpoint -->
+        <!-- and collapsed within the drawer below the 1000px breakpoint -->
+    </ods-responsive-menu-collapsible>
+
+<div class="menu-haut"><ods-responsive-menu-collapsible>
+<ul class="ods-front-header__management-menu">
+
+
+    
+        
+    
+
+    <li class="ods-front-header__management-menu-item">
+        <a class="ods-front-header__management-menu-item-link ods-front-header__management-menu-item-link--account "
+           
+           href="/account/"
+           title="c.fourny"
+           >
+            <div class="ods-front-header__account-avatar-container">
+                <img class="ods-front-header__account-avatar" alt="Account avatar" translate="alt" src="/avatar/c.fourny/24/" aria-hidden="true" />
+            </div>
+            <span class="ods-front-header__management-menu-item-link-label ods-front-header__account-name">
+                
+                    <span ng-non-bindable>
+                    FOURNY Clément
+                    </span>
+                
+            </span>
+        </a>
+    </li>
+    <li class="ods-front-header__management-menu-item">
+        <a class="ods-front-header__management-menu-item-link"
+           href="/logout/"
+           title="Déconnexion">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span class="ods-front-header__management-menu-item-link-label">Déconnexion</span>
+        </a>
+    </li>
+
+</ul>
+
+    </ods-responsive-menu-collapsible>
+    
+    </div>
+<div class="logo">
+    <a class="ods-front-header__portal-brand" href="/">
+            
+
+
+
+
+
+    <img src="https://s3-eu-west-1.amazonaws.com/aws-ec2-eu-1-opendatasoft-staticfileset/rennes-metropole/logo"
+         class="ods-front-header__logo "
+         alt="rennes-metropole"
+    />
+
+
+
+        </a>
+    
+    </div>
+    <div class="menu-haut"><ods-responsive-menu-collapsible> 
+<ul class="ods-front-header__menu">
+    
+  
+
+</header>
+
+<main class="main--mapbuilder ods-mapbuilder__main">
+    <h1 class="ods-aria-instructions">Éditeur de Cartes</h1>
+    
+    <div class="ods-mapbuilder__container"
+         ng-class="{'ods-mapbuilder__map--with-searchbox': interfaceMode === 'preview' && mapbuilderController.mapObject.value.searchBox,
+                    'ods-mapbuilder__map--with-right-panel': interfaceMode === 'preview' && mapbuilderController.mapObject.value.groups.length}"
+         ng-app="ods.frontend"
+         ng-controller="MapbuilderController as mapbuilderController">
+        <div class="ods-mapbuilder__map-container" ng-class="{'ods-mapbuilder__container--preview': interfaceMode === 'preview'}">
+            <ods-map class="ods-mapbuilder__map"
+                     ng-if="mapbuilderController.mapObject"
+                     no-refit="true"
+                     auto-resize="true"
+                     display-control="interfaceMode === 'preview' && mapbuilderController.mapObject.value.groups.length && mapbuilderController.mapObject.value.layerSelection"
+                     display-control-single-layer="mapbuilderController.mapObject.value.singleLayer"
+                     search-box="interfaceMode === 'preview' && mapbuilderController.mapObject.value.searchBox"
+                     auto-geolocation="false"
+                     display-legend="interfaceMode === 'preview'"
+                     map-config="mapbuilderController.mapObject.value"
+                     dynamic-config="mapbuilderController.dynamicConfig"
+                     sync-to-object="mapbuilderController.mapObject.value.mapPresets"></ods-map>
+            <ods-mapbuilder-main-panel ng-if="mapbuilderController.mapObject"
+                                       map-object="mapbuilderController.mapObject"
+                                       map-storage="mapbuilderController.mapStorage"></ods-mapbuilder-main-panel>
+        </div>
+        <ods-mapbuilder-datasets-panel ng-if="interfaceMode === 'edition'" map-config="mapbuilderController.mapObject"></ods-mapbuilder-datasets-panel>
+    </div>
+    
+</main>
+
+
+
+        </div>
+
+
+        
+
+        <script type="text/javascript" src="/static/compressed/js/df357c82119b.js"></script>
+
+        <script type="text/javascript" src="/static/compressed/js/2bea3b9ac6ca.js"></script>
+
+        <script type="text/javascript">
+            var app = angular.module('ods.core.config', []);
+
+            
+            app.factory("domainConfig", [function() {
+                return {"explore.dataset_catalog_separate_languages": null, "explore.catalog.geonavigation": null, "explore.disable_analyze": null, "languages": ["fr"], "explore.dataset_catalog_default_source_shared": null, "explore.enable_api_tab": true, "explore.reuse": true};
+            }]);
+            
+
+            app.factory("config", [function() {
+                return {
+                    DATASET_ID: '',
+                    LANGUAGE: 'fr',
+                    AVAILABLE_LANGUAGES: ["fr"],
+                    USER: 'c.fourny',
+                    FQ_USERNAME: 'c.fourny',
+                    BRAND_HOSTNAME: "opendatasoft.com",
+                    DEFAULT_BASEMAP: {"jawg_apikey": "4cKtE4Rze1HrvxWa9a7mdolSk10lVThTFC8zadQYMIMxTjkpTeIDJAAmhReDGnCH", "jawg_odsdomain": "rennes-metropole", "provider": "jawg.streets"},
+                
+                    DOMAIN_ID: 'rennes-metropole',
+                    ANONYMOUS_ACCESS_ENABLED: 'true',
+                    FEEDBACK: true,
+                    RESOURCE_DOWNLOAD_CONDITIONS: false,
+                    PARENT_DOMAIN: false,
+                    
+                    
+                    MINUTE_LEVEL_SCHEDULING: false,
+                    CATALOG_SEARCH_BOOSTING_ENABLED: false,
+                    
+                    GEOREFERENCE: true,
+                    
+                    CSV_DELIMITER: ';',
+                
+                    CENTRALSTORE: true,
+                    FORCE_DEBUG_LOGGER: false,
+                    RECAPTCHA_PUBLIC_KEY: '6LflroEUAAAAAH1LD8LksjNLDrYFfDp1_bf-D_RD',
+                    REQUEST_ID: '4558be1c07f790deea39efe7fdcbf855'
+                }
+            }]);
+        </script>
+
+        
+
+
+
+    </body>
+</html>
+
+====
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
